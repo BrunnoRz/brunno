@@ -1,4 +1,9 @@
-
+/*Reset css soft*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
 body {
   background: #3489;
@@ -6,10 +11,37 @@ body {
   background-size: auto 100vh;
   font-family: Arial;
   height:100vh;
+	font-size: 12px;
+	font-family: 'Amatic SC', cursive;
+}
+
+/* Se a tela pelo menos 400px vai carregar as informações */
+@media (min-width: 400px) {
+	body{
+	font-size: 14px;
+	}
+}
+
+/* Breakpoint */
+@media (min-width: 600px) {
+	body{
+	font-size: 18px;
+	}
+}
+
+header {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+		
 }
 
 .menu {
-  background-color: white;    
+  background-color: white;  
+	position: fixed;
+	width: 100vw; 
+	top: 0; 
 }
 
 .menu ul{
@@ -19,6 +51,12 @@ body {
 
 .menu li {
   list-style: none;  
+}
+
+.menu a{
+	display: block;
+	padding: 10px 20 px;
+	
 }
 
 a {
@@ -35,9 +73,65 @@ a:hover {
 .site-title{
   color: whitesmoke;
   text-align: center;
+	
+}
+
+.site-subtitle{
+	font-size: 4em;
+	font-family: 'Press Start 2P', cursive;
 }
 
 .site-subtitle{
  font-style: italic; 
+	line-height: 1.8em;
 }
 
+.portfolio {
+	padding: 2em;
+}
+
+.portfolio h2 {
+	font-family: 'Press Start 2P', cursive;
+	color: teal;
+	margin-bottom: 1.6em;
+	
+}
+
+.portfolio .grid{
+	display: grid;
+	gap: 1.2em;
+	grid-template-columns: 240px 240px;
+}
+
+@media (min-width: 560px) {
+	.portfolio .grid{
+	grid-template-columns: 240px 240px;
+	justify-content: ;
+}
+}
+
+@media (min-width: 860px) {
+	.portfolio .grid{
+	grid-template-columns: repeat(3, 280px);
+	align-content: center;
+	justify-content: center;
+	height: calc(100vh - 8em - 48px);
+}
+}
+
+.portfolio figure {
+	text-align: center;
+}
+
+.img-portfolio{
+	height: 240px;
+	width: 240px;
+	object-fit: cover;
+	object-position: left bottom;
+}
+
+@media (min-width: 1200px) {
+	height: auto;
+	width: 100%;
+}
+}
